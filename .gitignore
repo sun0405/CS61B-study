@@ -52,3 +52,6 @@ $RECYCLE.BIN/
 !AceMyFile/note_pics/*.png
 !AceMyFile/note_pics/gitPics/*.png
 !AceMyFile/cs61b_instru/*.png
+.vscode
+*/.idea
+*/out
