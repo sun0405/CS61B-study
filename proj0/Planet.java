@@ -6,7 +6,7 @@ public class Planet {
     public double yyVel; // current velocity in the y direction
     public double mass; // mass
     public String imgFileName; // name of the file that corresponds to the image that depicts the plane
-    public static double G = 6.67e-11;
+    private static double G = 6.67e-11;
 
     // first constructor
     public Planet(double xP, double yP, double xV,
