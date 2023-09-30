@@ -50,10 +50,10 @@ public class IntList {
     public static IntList squareListIterative(IntList L) {
         if (L == null) {
             return null;
-        }
-        IntList res = new IntList(L.first * L.first, null);
-        IntList ptr = res;
-        L = L.rest;
+        } //当L是空时，返回空
+        IntList res = new IntList(L.first * L.first, null); //构造新链表的开头
+        IntList ptr = res; //链表头
+        L = L.rest; //指向链表的下一个
         while (L != null) {
             ptr.rest = new IntList(L.first * L.first, null);
             L = L.rest;
@@ -69,7 +69,7 @@ public class IntList {
         if (L == null) {
             return null;
         }
-        return new IntList(L.first * L.first, squareListRecursive(L.rest));
+        return new IntList(L.first * L.first, squareListRecursive(L.rest)); //递归的方法
     }
 
     /** DO NOT MODIFY ANYTHING ABOVE THIS LINE! */
@@ -82,7 +82,17 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        if (A == null)
+            return B;
+        else{
+            IntList last;
+            last = A;
+            while (last.rest != null){
+                last = last.rest;
+            }
+            last.rest = B;
+            return A;
+        }
     }
 
     /**
@@ -91,7 +101,20 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        if (A == null)
+            return B;
+        else {
+            IntList newL = new IntList(A.first, null);
+            IntList ptr = newL;
+            A = A.rest;
+            while (A != null) {
+                ptr.rest = new IntList(A.first, null);
+                A = A.rest;
+                ptr = ptr.rest;
+            }
+            ptr.rest = B;
+            return newL;
+        }
     }
 
 
