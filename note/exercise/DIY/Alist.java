@@ -4,11 +4,16 @@
 
 public class AList {
     /** Creates an empty list. */
+    int[] items;
+    int size;
     public AList() {
+        items = new int[100];
+        size = 0;
     }
 
     /** Inserts X into the back of the list. */
     public void addLast(int x) {
+
     }
 
     /** Returns the item from the back of the list. */
